@@ -84,6 +84,8 @@ body {
     border: 0;
 }
 
+
+
 #header {
     display: flex;
     align-items: center;
@@ -101,4 +103,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.manipulacao{
+    display: flex;
+    justify-content: center;
 }
