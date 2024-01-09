@@ -1,0 +1,104 @@
+html {
+    background-color: #f3f3f3;
+}
+
+body {
+    font-family: "Lato", Arial, sans-serif;
+    width: 40%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 12px;
+
+    background-color: #fefefe;
+}
+
+/* #header {
+} */
+#header .profile-thumbnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    animation: name duration timing-function delay iteration-count direction
+        fill-mode play-state;
+    
+}
+#header .profile-name {
+    margin-left: 10px;
+}
+#header .follow-btn {
+    margin: 0 0 0 auto;
+}
+#header button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+}
+#header h3,
+#header h4 {
+    margin: 0;
+}
+
+#inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+    27% {
+        background-color: blue;
+    }
+    60% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+/* #footer {
+} */
+
+#footer #stats {
+    font-size: 15px;
+}
+
+#footer #stats strong {
+    font-size: 20px;
+}
+
+#footer .buttons {
+    margin-left: auto;
+}
+
+#footer .buttons button {
+    border: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wropper{
+    display: flex;
+    align-items: center;
+}
+#follow{
+    justify-self: flex-end;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

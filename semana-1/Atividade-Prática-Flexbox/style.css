@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(244, 197, 158);
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.bolinha-1, 
+.bolinha-2, 
+.bolinha-3{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 5px black;
+}.bolinha-1, 
+.bolinha-3{
+    background-color: orange;
+}.bolinha-2{
+    background-color: blue;
+}
+
+/* --------------------------container 2---------------------------------------- */
+
+.container-2{
+    background-color: rgb(111, 77, 121);
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cima{
+    display: flex;
+    justify-content: end;
+}
+.baixo{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.quadrado{
+    background-color: violet;
+    width: 100px;
+    height: 100px;
+    border: solid 5px black;
+}
