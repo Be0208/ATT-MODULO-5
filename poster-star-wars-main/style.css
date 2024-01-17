@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Starwars;
+  src: url('./font/star-jedi/Starjhol.ttf');
+}
+
+@font-face {
+  font-family: Starwars-jedi;
+  src: url('./font/star-jedi/Starjedi.ttf');
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/background.png') no-repeat;
+  background-size: cover;
+  opacity: 0;
+  z-index: -1;
+  animation: fadeInImage 1s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: black;
+  transition: changeBackground 1s ease-in-out; 
+}
+
+.change-background {
+  animation: changeBackground 1s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes changeBackground {
+  from {
+    background: black;
+  }
+  to {
+    background: transparent; 
+  }
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+.container {
+  background: transparent;
+  width: 100vw;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.poster-1 {
+  transform: translateY(-1000px);
+  margin-top: 10px;
+  animation: show-poster 1s linear 1;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.title {
+  font-family: Starwars;
+  font-size: 7rem;
+  text-align: center;
+  color: yellow;
+  animation: bounce 4s linear 6s infinite;
+}
+
+.second-title {
+  color: white;
+  font-family: Starwars-jedi;
+  font-size: 2rem;
+  text-align: center;
+  animation: bounce 4s linear 6s infinite;
+}
+
+
+.glow {
+  transform: translateY(1300px);
+  margin-top: 5rem;
+  padding: 13px;
+  font-size: 20px;
+  font-family: Starwars-jedi;
+  color: #f5f0f0;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate, show-devs 2s linear 6s 1 forwards;
+}
+
+.glow a {
+  color: #f5f0f0;
+  text-decoration: none;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60026, 0 0 40px #e60026, 0 0 50px #f6e20a, 0 0 60px #e60026, 0 0 70px #e60026;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0a90f6, 0 0 40px #0a90f6, 0 0 50px #f6e20a, 0 0 60px #0a90f6, 0 0 70px #0a90f6, 0 0 80px #0a90f6;
+  }
+}
+
+@keyframes show-poster {
+  from {
+    transform: translateY(-1000px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes show-devs {
+  from {
+    transform: translateY(1300px);
+  }
+
+  to {
+    transform: translateY(28rem);
+  }
+}
+
+.ship img {
+  width: 100px;
+  position: absolute;
+  z-index: 10;
+  top: -100px;
+  right: -100px;
+  animation: move-ship 8s linear 1;
+}
+
+@keyframes move-ship {
+  0% {
+    width: 105px;
+  }
+
+  100% {
+    width: 7655px;
+  }
+}
+
+.premiere-data {
+  
+  position: absolute;
+  font-size: 30px;
+  top: 80px;
+  right: 0px;
+  color: transparent;
+  font-family: Starwars-jedi;
+  border-right: 5px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 22s steps(30) 8s infinite,
+    flashing-bar 1s steps(30) 8s infinite normal,
+    bounce 4s linear 15s infinite;
+  border-color: transparent;
+}
+
+.movie-premiere {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 29vw;
+  height: 10vh;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+    color: white;
+  }
+  25% {
+    width: 100%;
+    color: white;
+  }
+  75%{
+    width: 100%;
+    color: white;
+  }
+  100% {
+    width: 0%;
+    color: white;
+  }
+}
+
+@keyframes flashing-bar {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: white;
+  }
+}
