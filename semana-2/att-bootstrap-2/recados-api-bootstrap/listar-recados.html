@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Recados</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" alt="">
+            <h1 class="title">Lista de Recados</h1>
+            <h2 class="subtitle">Todos os meus recados</h2>
+        </header>
+
+        <main>
+            <div class="messages-list">
+
+            </div>
+
+            <div class="pagination"> <!--  DIV QUE CONTEM A PAGINAÇÂO-->
+                <button id="frist">frist</button>
+                <button id="prevPage">Anterior</button>
+                <button id="nextPage">Próxima</button>
+                <button id="last">last</button>
+            </div>
+            <div class="pagination"> <!--  DIV QUE CONTEM A PAGINAÇÂO-->
+                <div id="numbers"></div>
+            </div>
+            <div class="pagination"> <!--  DIV QUE CONTEM A PAGINAÇÂO-->
+                <div id="pageNumbers"></div>
+            </div>
+        </main>
+
+        <footer>
+            <h4 style="text-align: center;">Cadastre mais recados aqui:</h4>
+            <button class="btn-submit" id="newRecado">Cadastrar Recado</button>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f9e19193d6.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/deleteMessages.js"></script>
+</body>
+
+</html>

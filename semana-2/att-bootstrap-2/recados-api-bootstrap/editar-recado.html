@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Recado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" alt="">
+
+            <h1 class="title">Edite seu recado</h1>
+            <h2 class="subtitle">
+                Você pode alterar um recado já cadastrado
+            </h2>
+        </header>
+
+        <main>
+            <form id="form-edit-message">
+                <div class="form-control">
+                    <label for="title-edit">Título</label>
+                    <input type="text" id="title-edit" placeholder="Insira um título para o recado" value="" />
+                </div>
+
+                <div class="form-control">
+                    <label for="description-edit">Descrição</label>
+                    <textarea type="text" id="description-edit" placeholder="Insira uma descrição para o recado"
+                        value=""></textarea>
+                </div>
+
+                <button class="btn-submit" type="submit">Atualizar Recado</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/editMessages.js"></script>
+</body>
+
+</html>

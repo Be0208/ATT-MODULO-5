@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" alt="">
+            <h1 class="title">Fazer login em sua conta</h1>
+            <h2 class="subtitle">Ainda não tem uma conta?
+                <a href="cadastrar-usuario.html">Cadastre-se</a>
+            </h2>
+        </header>
+
+        <main>
+            <form id="form-login">
+                <div class="form-control">
+                    <label for="email-login">E-mail</label>
+                    <input type="email" id="email-login" name="email" placeholder="Insira seu e-mail" />
+
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small></small>
+                </div>
+
+                <div class="form-control">
+                    <label for="password-login">Senha</label>
+                    <input type="password" id="password-login" name="password-login" placeholder="Insira sua senha" />
+
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small></small>
+                </div>
+
+                <button class="btn-submit" type="submit">Entrar</button>
+            </form>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/login.js"></script>
+</body>
+
+</html>
