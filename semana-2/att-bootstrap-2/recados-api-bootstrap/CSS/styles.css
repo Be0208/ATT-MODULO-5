@@ -29,7 +29,7 @@ a {
 }
 
 .container {
-  width: 30rem;
+  width: auto;
 }
 
 .header {
@@ -60,9 +60,7 @@ a {
 }
 
 .form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
+  border-radius: 16px;
 }
 
 .form-control label {
