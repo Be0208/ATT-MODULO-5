@@ -116,7 +116,9 @@ lastPage.addEventListener('click', () => {
   fetchMessages(currentPage)
 })
 
-newRecado.addEventListener('click', () => {
-  location.href = `cadastrar-recado.html`
-})
+// trocado por um modal
+
+// newRecado.addEventListener('click', () => {
+//   location.href = `cadastrar-recado.html`
+// })
 
