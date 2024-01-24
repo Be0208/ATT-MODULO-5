@@ -55,7 +55,32 @@ async function fetchMessages(page) { //faz a requisição para a api
         <p class="card-description">${message.description}</p>
         <div class="card-icons">
           <i class="fas fa-solid fa-trash" data-id=${message.id}></i>
-          <i class="fas fa-regular fa-edit" data-id=${message.id}></i>
+
+
+          <i type="button" class="fas fa-regular fa-edit" data-id=${message.id} data-bs-toggle="modal" data-bs-target="#edit"></i>
+
+            <div class="modal fade " id="edit" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                        <form id="form-edit-message" class="container-fluid ">
+                        <div class="form-control row-cols-auto my-3 p-4    ">
+                            <label for="title-edit">Título</label>
+                            <input type="text" id="title-edit" placeholder="Insira um título para o recado" value="" />
+                        </div>
+        
+                        <div class="form-control row-cols-auto my-3 p-4   ">
+                            <label for="description-edit">Descrição</label>
+                            <textarea type="text" id="description-edit" placeholder="Insira uma descrição para o recado"
+                                value=""></textarea>
+                        </div>
+        
+                        <button class="btn-submit" type="submit">Atualizar Recado</button>
+                    </form>
+                        </div>
+                    </div>
+                </div>
+                <div>
         </div>
       `
 
@@ -73,9 +98,29 @@ async function fetchMessages(page) { //faz a requisição para a api
       editIcon.addEventListener('click', () => {
         const messageId = editIcon.getAttribute('data-id')
 
-        navigateToEditPage(messageId)
+        const formEditMessage = document.getElementById('form-edit-message')
+        const titleInput = document.getElementById('title-edit')
+        const descriptionInput = document.getElementById('description-edit')
+
+        formEditMessage.addEventListener('submit', (event) => {
+          event.preventDefault()
+        
+          const titleValue = titleInput.value
+          const descriptionValue = descriptionInput.value
+        
+          const editMessage = {
+            title: titleValue,
+            description: descriptionValue
+          }
+        
+          updateMessage(messageId, editMessage)
+        })
+
+        // navigateToEditPage(messageId)
       })
     });
+
+
 
     if (messages.length === 0) {
       const h3 = document.createElement('h3')
@@ -89,9 +134,9 @@ async function fetchMessages(page) { //faz a requisição para a api
 
 fetchMessages(currentPage) //o o valor da pagina "1, 2, 3, 4, ..."
 
-function navigateToEditPage(messageId) {
-  location.href = `editar-recado.html?id=${messageId}`
-}
+// function navigateToEditPage(messageId) {
+//   location.href = `editar-recado.html?id=${messageId}`
+// }
 
 prevPage.addEventListener('click', () => { 
   if (currentPage > 1) {
@@ -122,3 +167,16 @@ lastPage.addEventListener('click', () => {
 //   location.href = `cadastrar-recado.html`
 // })
 
+async function updateMessage(messageId, editMessage) {
+          try {
+            const response = await api.put(`/notes/${messageId}`, editMessage)
+        
+            if (response.status === 200) {
+              alert('Recado atualizado com sucesso!')
+            }
+        
+            location.href = "listar-recados.html"
+          } catch (error) {
+            console.log('Erro ao atualizar recado.')
+          }
+        }
