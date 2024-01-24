@@ -44,6 +44,7 @@ a {
 
 .header .logo {
   margin-bottom: 4rem;
+  width: 50vh;
 }
 
 .header .title {
@@ -137,7 +138,7 @@ a {
   width: 100%;
   padding: 0px 1.5rem;
   border-radius: 16px;
-  background: #087F5B;
+  background: #4749d3;
   margin-top: 1.5rem;
   border: 0;
   color: #fff;
@@ -149,7 +150,7 @@ a {
 }
 
 .btn-submit:hover {
-  background: #0a936a;
+  background: #686ad0;
 }
 
 /* Estilos dos cards de recado */
@@ -206,7 +207,7 @@ a {
 
 /* Estilo para os botões de página */
 .pagination button {
-  background-color: #087F5B;
+  background-color:#4749d3;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -216,7 +217,7 @@ a {
 }
 
 /* Estilo para o botão de página ativa */
-.pagination button.active {
-  background-color: #0a936a;
+.pagination button.active, .pagination button:hover{
+  background-color: #686ad0;
 }
 
