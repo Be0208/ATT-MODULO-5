@@ -16,62 +16,33 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
-<body>
-    <div class="container ">
+<body class="vh-100">
+    <header class="color-violet w-100 "></header>
 
-        <header class="header row ">
-            <img class="logo" src="./images/logo.svg" alt="">
-            <h1 class="title">Fazer login em sua conta</h1>
+    <div class="container d-flex flex-column vh-100">
 
+        <div class="container mt-5 d-flex flex-column justify-content-center " style="gap: 20px ;">
 
-            <h2 class="subtitle">Ainda não tem uma conta?
-                <!-- Modal -->
-                <a type="button" class="btn col " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Cadastrar usuario
-                </a>
+            <div class="row">
+                <div class="col">
+                    <h1>Sign in</h1>
+                    <p>Sign in on the internal plataform</p>
+                </div>
+            </div>
 
-                <div class="modal fade " id="exampleModal" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
+            <div class="row  d-flex justify-content-center">
+                <div class="col-6  d-flex justify-content-center"><button type="button"
+                        class="btn color-violet btn-primary btn-md  w-100 ">LOGIN WITH FACEBOOK</button></div>
+                <div class="col-6  d-flex justify-content-center"><button type="button"
+                        class="btn color-violet btn-primary btn-md  w-100 ">LOGIN WITH GOOGLE</button></div>
+                <div class="col-12 d-flex justify-content-center mt-3">or login with email address</div>
 
+            </div>
+        </div>
 
-                                <div class="container">
-                                    <form id="form-new-user">
-                                        <div class="form-control">
-                                            <label for="name">Nome</label>
-                                            <input type="text" id="name" name="name" placeholder="Insira seu nome" />
-                                        </div>
-
-                                        <div class="form-control">
-                                            <label for="email">E-mail</label>
-                                            <input type="email" id="email" name="email"
-                                                placeholder="Insira seu e-mail" />
-                                        </div>
-
-                                        <div class="form-control">
-                                            <label for="password">Senha</label>
-                                            <input type="password" id="password" name="password"
-                                                placeholder="Insira sua senha" />
-                                        </div>
-
-                                        <button class="btn-submit" type="submit">Cadastrar usuário</button>
-                                    </form>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-            </h2>
-
-
-        </header>
-
-        <main>
+        <main class="container mt-5 ">
             <form id="form-login">
-                <div class="form-control">
+                <div class="form-control mb-3">
                     <label for="email-login">E-mail</label>
                     <input type="email" id="email-login" name="email" placeholder="Insira seu e-mail" />
 
@@ -80,7 +51,7 @@
                     <small></small>
                 </div>
 
-                <div class="form-control">
+                <div class="form-control mb-3 my-3 ">
                     <label for="password-login">Senha</label>
                     <input type="password" id="password-login" name="password-login" placeholder="Insira sua senha" />
 
@@ -89,9 +60,63 @@
                     <small></small>
                 </div>
 
-                <button class="btn-submit" type="submit">Entrar</button>
+                <button class="btn color-violet btn-primary btn-md w-100" type="submit">Entrar</button>
             </form>
         </main>
+
+        <footer class="container-fluid mt-5 ">
+
+            <div class="row justify-content-center ">
+                <div class="col-auto ">
+                    <h2 class="subtitle">Ainda não tem uma conta?</h2>
+                </div>
+                <div class="col-auto ">
+                    <button class="btn color-violet btn-primary btn-md w-100 col-auto " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Cadastrar usuario
+                    </button>
+
+                    <div class="modal fade " id="exampleModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form id="form-new-user">
+                                            <div class="form-control mb-3 ">
+                                                <label for="name">Nome</label>
+                                                <input type="text" id="name" name="name"
+                                                    placeholder="Insira seu nome" />
+                                            </div>
+
+                                            <div class="form-control mb-3">
+                                                <label for="email">E-mail</label>
+                                                <input type="email" id="email" name="email"
+                                                    placeholder="Insira seu e-mail" />
+                                            </div>
+
+                                            <div class="form-control mb-3">
+                                                <label for="password">Senha</label>
+                                                <input type="password" id="password" name="password"
+                                                    placeholder="Insira sua senha" />
+                                            </div>
+
+                                            <button class="btn mb-3  color-violet btn-primary btn-md w-100"
+                                                type="submit">Cadastrar usuário</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -102,10 +127,10 @@
     <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    
+
     <script src="JS/api.js"></script>
     <script src="JS/login.js"></script>
-    
+
 </body>
 
 </html>
