@@ -1,7 +1,4 @@
-const formLogin = document.getElementById('form-login')
 
-const emailInput = document.getElementById('email-login')
-const passwordInput = document.getElementById('password-login')
 
 // new user ---------------------------------------------------------------------
 const formNewUser = document.getElementById('form-new-user')
@@ -34,7 +31,16 @@ async function addNewUser(newUser) {
   }
 }
 
+
 // --------------------------------------------------------------------------------------
+
+
+// login de usuario
+const formLogin = document.getElementById('form-login')
+
+const emailInput = document.getElementById('email-login')
+const passwordInput = document.getElementById('password-login')
+
 
 formLogin.addEventListener('submit', (e) => {
   e.preventDefault() // impedir comportamento padrão do submit
