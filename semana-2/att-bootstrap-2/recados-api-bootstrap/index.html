@@ -22,9 +22,51 @@
         <header class="header row ">
             <img class="logo" src="./images/logo.svg" alt="">
             <h1 class="title">Fazer login em sua conta</h1>
+
+
             <h2 class="subtitle">Ainda não tem uma conta?
-                <a href="cadastrar-usuario.html">Cadastre-se</a>
+                <!-- Modal -->
+                <a type="button" class="btn col " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Cadastrar usuario
+                </a>
+
+                <div class="modal fade " id="exampleModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+
+                                <div class="container">
+                                    <form id="form-new-user">
+                                        <div class="form-control">
+                                            <label for="name">Nome</label>
+                                            <input type="text" id="name" name="name" placeholder="Insira seu nome" />
+                                        </div>
+
+                                        <div class="form-control">
+                                            <label for="email">E-mail</label>
+                                            <input type="email" id="email" name="email"
+                                                placeholder="Insira seu e-mail" />
+                                        </div>
+
+                                        <div class="form-control">
+                                            <label for="password">Senha</label>
+                                            <input type="password" id="password" name="password"
+                                                placeholder="Insira sua senha" />
+                                        </div>
+
+                                        <button class="btn-submit" type="submit">Cadastrar usuário</button>
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
             </h2>
+
+
         </header>
 
         <main>
@@ -61,7 +103,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="JS/api.js"></script>
     <script src="JS/login.js"></script>
-    <script src="./JS/newUser.js"></script>
+    
 </body>
 
 </html>

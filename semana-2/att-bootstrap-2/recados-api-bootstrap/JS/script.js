@@ -115,8 +115,6 @@ async function fetchMessages(page) { //faz a requisição para a api
         
           updateMessage(messageId, editMessage)
         })
-
-        // navigateToEditPage(messageId)
       })
     });
 
